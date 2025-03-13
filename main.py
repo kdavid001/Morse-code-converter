@@ -16,7 +16,6 @@ morse_dict = {
     "!": "-.-.--", "-": "-....-", "/": "-..-.", "@": ".--.-.", "(": "-.--.", ")": "-.--.-"
 }
 
-
 reverse_morse_dict = {v: k for k, v in morse_dict.items()}  # to convert the morse to text got this part from chatgbt
 # to simplify what i did earlier
 
@@ -75,7 +74,7 @@ def on_release(key):
         decoded_text = ""
         print("Morse Code reset!")
 
-    elif key_name == keyboard.Key.esc: # exit
+    elif key_name == keyboard.Key.esc:  # exit
         print(f"Final Decoded Message: {decoded_text}")
         print("Exiting program...")
         return False  # To Stop listener
@@ -84,3 +83,5 @@ def on_release(key):
 # Start listening
 with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
     listener.join()
+
+# Copyright © 2025 David Ogunmola. All Rights Reserved.
